@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/*
+#4B6584; //Cor para background
+#2C3A47; //Cor para texto
+#B2BEC3; //Cor para texto2
+
+Utilização da variável:
+
+background: var(--preta);
+
+*/
+
+:root {
+    --fundo: #4B6584;
+    --cor-1: #B2BEC3;
+    --cor-2: #2C3A47;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DotGothic16', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil {
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cabecalho {
+    background-color: var(--cor-2);
+    padding: 60px 40px
+}
+
+.imagem {
+    display: inline-block;
+    background: linear-gradient(130deg, #B2BEC3, #4B6584);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient {
+    25% {
+        background-position: left bottom;
+    }
+    50% {
+        background-position: right bottom;
+    }
+    75% {
+        background-position: right top;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+
+.imagem img {
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.nome {
+    color: var(--cor-1);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.descricao {
+    color: var(--cor-1);
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.icones a {
+    color: var(--fundo);
+    width: 46px;
+    font-size: 34px;
+    transition: .3s linear;
+}
+
+.icones a:hover {
+    color: var(--cor-1);
+}
+
+.botao-para-contato {
+    display: inline-block;
+    padding: 12px 50px;
+    color: var(--cor-1);
+    border: 2px solid var(--cor-1);
+    border-radius: 6px;
+    margin-top: 30px;
+    transition: .3s linear;
+}
+
+.botao-para-contato:hover {
+    color: var(--cor-2);
+    background-color: var(--cor-1);
+    font-weight: 600;
+}
+
+.rodape {
+    background-color: var(--cor-1);
+    padding: 60px 10px;
+}
+
+.numeros {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--cor-2);
+}
+
+.item span {
+    display: block;
+    color: var(--fundo);
+    font-size: 30px;
+}
+
+.borda {
+    width: 1px;
+    height: 30px;
+    background-color: var(--fundo);
+}
